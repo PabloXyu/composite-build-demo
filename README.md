@@ -39,6 +39,32 @@ This app code is written on *Android Studio Arctic Fox IDE (2020.3.1, Patc
 * rebuild the project.
 * *Version Control*: make first Push.
 ---
+### <sup>☑ </sup> Build Source
+> `buildSrc` is a directory at the project root level which contains build info.  
+> We can use this directory to enable kotlin-dsl and write logic related to custom configuration and share them across the project.  
+> It was one of the most used approaches in recent days because of its testability.
+
+>### <sup>☑ </sup>Gradle Doc:
+> The directory `buildSrc` is treated as an included build.  
+> Upon discovery of the directory, *Gradle* automatically compiles and tests this code and puts it in the classpath of your build script.  
+> There can be only one buildSrc directory for multi-project builds, which has to sit in the root project directory.  
+> `buildSrc` should be preferred over script plugins as it is easier to maintain, refactor, and test the code.
+---
+## Build Source `buildSrc` & Build Plugin `buildPlg` modules<sup>🟦</sup>
+* create directory for module `:buildSrc` (Source Build) with file `build.gradle.kts` including repos.
+* in `buildSrc:build.gradle` include `kotlin-dsl` plugin and the same repos as in root build file.
+* create `src/main/kotlin` directory and mark it  as *Sources Root* (blue color).
+* In  *Kotlin Sources Root* create `util` package with kotlin file.
+* create directory for module `:buildPlg` (Source Build) with file `build.gradle` including repos.
+* in `buildPlg:build.gradle` include `kotlin-dsl` plugin and the same repos as in root build file.
+* create `buildPlg:settings.gradle` file with `pluginManagement{}` block including repos.
+* add `includeBuild("buildPlg")` in root `:settings.gradle`
+* though `RepositoriesMode` is marked unstable and generates warnings, ignore it:
+   * _Settings…_ **:** choose _Editor_ **>** _Inspections_
+   * choose _Android_ **>** _Lint_ **>** _Correctness_
+   * uncheck _Obsolete Gradle Dependency (available for Analyse|Inspect Code)_
+* rebuild the project
+---
 ## Testing<sup>🧪</sup> the Build Process From the Scratch
 1. delete root project directories marked orange:
    * `~/.gradle`
