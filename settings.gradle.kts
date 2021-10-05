@@ -6,6 +6,7 @@ include(":app")
 includeBuild("buildPlg")
 rootProject.name = "composite-build-demo"
 
+// https://docs.gradle.org/current/userguide/declaring_repositories.html#sub:centralized-repository-declaration
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {

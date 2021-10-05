@@ -20,10 +20,10 @@ plugins { `kotlin-dsl` }
 repositories {
     google()
     mavenCentral()
-    gradlePluginPortal()
+    gradlePluginPortal()// so that external plugins can be resolved in dependencies section
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.30")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.30")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.5.31")
 }

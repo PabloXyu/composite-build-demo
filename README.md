@@ -43,8 +43,7 @@ This app code is written on *Android Studio Arctic Fox IDE (2020.3.1, Patc
 > `buildSrc` is a directory at the project root level which contains build info.  
 > We can use this directory to enable kotlin-dsl and write logic related to custom configuration and share them across the project.  
 > It was one of the most used approaches in recent days because of its testability.
-
->### <sup>☑ </sup>Gradle Doc:
+>#### Gradle Doc:
 > The directory `buildSrc` is treated as an included build.  
 > Upon discovery of the directory, *Gradle* automatically compiles and tests this code and puts it in the classpath of your build script.  
 > There can be only one buildSrc directory for multi-project builds, which has to sit in the root project directory.  

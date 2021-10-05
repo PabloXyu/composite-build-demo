@@ -8,7 +8,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.3.1")
 
     implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.compose.material:material:1.1.0-alpha03")
+    implementation("androidx.compose.material:material:1.1.0-alpha05")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

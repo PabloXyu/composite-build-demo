@@ -3,26 +3,26 @@ package util
 
 import java.util.*
 /**═════════════════════════════════════════════════════════════════════════════════════════════════
-                            Android (Java & Kotlin) Naming Convention:
+Android (Java & Kotlin) Naming Convention:
 ════════════════════════════════════════════════════════════════════════════════════════════════════
-    Naming convention for object names in Android project (Java & Kotlin)
-    example: "xxx case", "xxxcase" word where xxx is type.
+Naming convention for object names in Android project (Java & Kotlin)
+example: "xxx case", "xxxcase" word where xxx is type.
 
-    camelCase            : function, property and local variable names
-    dot.case             : package path, gradle module group names
-    kebab-case           : gradle plugin names
-    PascalCase           : class & interface names
-    snake_case           : android resources xml file names
-    SCREAMING_SNAKE_CASE : constant names
-    _underscorePrefix    : baking property names
+camelCase            : function, property and local variable names
+dot.case             : package path, gradle module group names
+kebab-case           : gradle plugin names
+PascalCase           : class & interface names
+snake_case           : android resources xml file names
+SCREAMING_SNAKE_CASE : constant names
+_underscorePrefix    : baking property names
 
-    word "noninitial" is a synonym of "not first" here.
+word "noninitial" is a synonym of "not first" here.
 ══════════════════════════════════════════════════════════════════════════════════════════════════*/
 
 
 /**
  * ©Paweł Zygmunciak 2021
- * ## [NamingStyleConversion] class ##
+ * # [NamingStyleConversion] utility class #
  *
  * @see <p align="right"><a href="https://regex101.com/">
  * Regex 101</a></p>
@@ -32,9 +32,10 @@ import java.util.*
  */
 open class NamingStyleConversion {
     private companion object Regex {
-        // Regex special characters: . + * ? ^ $ ( ) [ ] { } | \
+        // Regex special characters:
+        // . + * ? ^ $ ( ) [ ] { } | \
 
-        // emptiness...
+        // Emptiness is Form, Form is Emptiness...
         const val EMPTY = ""
 
         //separators:
@@ -49,7 +50,7 @@ open class NamingStyleConversion {
         const val CAPITAL = "[A-Z]"
         const val ALPHANUMERIC = "[a-zA-Z0-9]"
 
-        
+
         //Regular Expression Patterns:
 
         // ^
@@ -223,7 +224,7 @@ open class NamingStyleConversion {
     fun String.kebabcasePrefix(): String = this.separatorCasePrefix()
     fun String.pascalcasePrefix(): String = PASCALCASE_PREFIX.regexFind(this)
     fun String.snakecasePrefix(): String = this.separatorCasePrefix()
-    fun String.SnakecaseScreamingPrefix(): String = this.separatorCasePrefix()
+    fun String.snakecaseScreamingPrefix(): String = this.separatorCasePrefix()
 
     // FIND SUFFIX
     fun String.camelcaseSuffix(): String = CAPITALIZED_SUFFIX.regexFind(this)
@@ -231,10 +232,6 @@ open class NamingStyleConversion {
     fun String.kebabcaseSuffix(): String = this.separatorCaseSuffix()
     fun String.pascalcaseSuffix(): String = this.camelcaseSuffix()
     fun String.snakecaseSuffix(): String = this.separatorCaseSuffix()
-    fun String.SnakecaseScreamingSuffix(): String = this.snakecaseSuffix()
+    fun String.snakecaseScreamingSuffix(): String = this.snakecaseSuffix()
 
 }
-/*
-typealias RegexTransformation = (MatchResult) -> CharSequence
-typealias RegexPattern = String
-*/
