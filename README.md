@@ -1,9 +1,15 @@
 <!-- "gradle-as" is a png picture of logos AS IDE, Android and Gradle together -->
-![gradle-as](https://user-images.githubusercontent.com/26512179/132996456-1d7dd5df-2604-4131-82c0-4af6629ba04b.png)
+![gradle-as](https://user-images.githubusercontent.com/26512179/167963969-778cfece-769d-4da9-b23a-e4a08e3781bd.png)
+<br/>
 
+## NOTICE:
+
+## This repository is actually a clone of [ app-build-demo](https://github.com/PabloXyu/app-build-demo) code, but right properly named commits correspond to steps of included tutorial/procedure of [App Build Demo](https://github.com/PabloXyu/app-build-demo).
+<!-- 3px blue line -->
+![](https://user-images.githubusercontent.com/26512179/167968709-139094d0-f85f-4fd3-ba1a-b4daeb22ce50.png)
 # Gradle<sup>🐘</sup> Composite Build Demo Application
 The purpose of the project is to extend my Android programming knowledge,
-showing my coding skills for job interview, and share my knowledge
+showing my coding skills for job interview, and share my knowledge<
 with other programmers for the benefit of this worldwide android-enthusiastic community.
 <br></br>
 This is my first published repository.  
@@ -19,7 +25,7 @@ This app code is written on [*Android Studio Arctic Fox IDE (2020.3.1, Pat
 > Although Google Android documentation uses term *project* and its *modules*,  
 > Gradle documentation names *module* as *project* or *subproject*.
 
-<br></br>
+<br/>
 > ### <sup>☑ </sup> Root Script `build.gradle`
 >
 > #### `buildscript{}` block
